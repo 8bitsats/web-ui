@@ -1,0 +1,16 @@
+{
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--check",
+    "--line-length",
+    "120"
+  ],
+  "editor.formatOnSave": true,
+  "python.languageServer": "Pylance",
+  "ruff.args": [
+    "--config=pyproject.toml"
+  ]
+}

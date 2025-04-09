@@ -59,7 +59,8 @@ Common action sequences:
 - If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!
 - If you have to do something repeatedly for example the task says for "each", or "for all", or "x times", count always inside "memory" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.
 - Don't hallucinate actions
-- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. 
+- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task.
+- IMPORTANT: The done action MUST use the exact format: {"done": {"text": "your result text here", "success": true/false}}. Always use "text" as the field name, not "message" or any other name.
 
 6. VISUAL CONTEXT:
 - When an image is provided, use it to understand the page layout
@@ -73,4 +74,4 @@ Common action sequences:
 
 9. Extraction:
 - If your task is to find information - call extract_content on the specific pages to get and store the information.
-Your responses must be always JSON with the specified format. 
+Your responses must be always JSON with the specified format.
